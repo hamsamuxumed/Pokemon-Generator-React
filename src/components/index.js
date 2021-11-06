@@ -1,1 +1,2 @@
-export {AboutInfo} from './about-info'
+export { AboutInfo } from './about-info'
+export { Card } from './Card'

@@ -1,9 +1,11 @@
 import React from 'react'
 
+import './style.css'
+
 export const AboutInfo = ({ info }) => {
     return (
         <>
-            <h1>Pokemon</h1>
+            <h1>Pokémon</h1>
             <p>{info}</p>
         </>
     )
