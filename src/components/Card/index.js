@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import './style.css'
 
 
-export const Card = () => {
-    // const [fetch, setFetch] = useState();
-
-    // useEffect()
-
+export const Card = ({ url, name, id }) => {
 
 
     return (
-        <>
-            
-        </>
+        <div>
+
+            <img src={url} alt={`pic of ${name}`} />
+
+            <h5><span>#{id}-</span>{name}</h5>
+
+
+
+
+        </div>
     )
 }
