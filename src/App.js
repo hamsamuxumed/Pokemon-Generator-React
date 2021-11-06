@@ -1,9 +1,21 @@
+import React from 'react';
+// import { Routes, Route } from 'react-router-dom';
+import * as Pages from './pages'
+
+
 import './App.css';
+
 
 function App() {
   return (
     <>
-      <h1>The world ooo</h1>
+      {/* <Routes> */}
+      {/* <Route exact path='/'> */}
+      <Pages.About info='The Pokémon universe is a fictional universe that encompasses the Pokémon media franchise, including stories and fictional works produced by The Pokémon Company' />
+      <Pages.GenPokemon />
+      {/* </Route> */}
+      {/* </Routes> */}
+
     </>
   );
 }
