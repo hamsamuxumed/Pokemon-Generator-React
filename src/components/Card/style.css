@@ -1,3 +1,10 @@
-div {
-    border: 2px solid black;
+
+#card-div {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid red;
+    margin: 20px;
+    padding: 2rem;
+    width: 30%;
 }
+
