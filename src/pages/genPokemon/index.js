@@ -36,6 +36,8 @@ export const GenPokemon = () => {
 
     }, [])
 
+
+
     console.log(fetchPokemon)
 
     return (
@@ -49,7 +51,7 @@ export const GenPokemon = () => {
                 type={p.types[0].type.name}
             />))}
 
-            <button>Generate</button>
+            <button onClick={() => { fetching() }}>Generate</button>
         </div>
     )
 }
