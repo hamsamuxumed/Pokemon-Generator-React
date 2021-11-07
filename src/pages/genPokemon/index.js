@@ -18,12 +18,10 @@ export const GenPokemon = () => {
             const getPokemon = (results) => {
                 results.forEach(async (pokemon) => {
                     const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
-
                     setFetchPokemon(prevState => [...prevState, data])
                 })
             }
             getPokemon(data.results)
-
 
         } catch (err) {
             console.log(err)
@@ -34,28 +32,23 @@ export const GenPokemon = () => {
 
     useEffect(() => {
         fetching()
+        return setFetchPokemon([])
 
     }, [])
-
-    // const handleClick = async () => {
-
-    //     const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon-species')
-    //     console.log(data.results)
-    //     return (
-    //         data.results.map((name, url, i) => <Card name={name} url={url} key={`${i + 1}`} />)
-
-    //     )
-
-    // }
 
     console.log(fetchPokemon)
 
     return (
         <div id='main-div'>
 
-            {fetchPokemon.map((p, i) => (<Card key={i} name={p.name} url={p.sprites.front_default} id={i + 1} />))}
+            {fetchPokemon.map((p, i) => (<Card
+                key={i}
+                name={p.name}
+                url={p.sprites.other.dream_world.front_default}
+                id={i + 1}
+                type={p.types[0].type.name}
+            />))}
 
-            {/* {fetchPokemon} */}
             <button>Generate</button>
         </div>
     )
